@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KopiKita - Pemesanan Kopi Online</title>
+
+    <style>
+        /* =========================
+           CSS / TAMPILAN HALAMAN
+           ========================= */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f1eb;
+            color: #333;
+        }
+
+        header {
+            background-color: #5c3d2e;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: #3e2723;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #5c3d2e;
+        }
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        /* =========================
+           TABEL
+           ========================= */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #999;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #d7b899;
+        }
+
+        /* =========================
+           FORMULIR
+           ========================= */
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #5c3d2e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #3e2723;
+        }
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        footer {
+            background-color: #3e2723;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+
+    <header>
+        <h1>☕ KopiKita</h1>
+        <p>Pesan kopi favoritmu dengan mudah dan cepat.</p>
+    </header>
+
+
+    <!-- =========================
+         NAVIGASI
+         ========================= -->
+
+    <nav>
+        <a href="#tentang">Tentang</a>
+        <a href="#keunggulan">Keunggulan</a>
+        <a href="#menu">Menu</a>
+        <a href="#pesan">Pesan Sekarang</a>
+    </nav>
+
+
+    <!-- =========================
+         KONTEN UTAMA
+         ========================= -->
+
+    <main>
+
+        <!-- SECTION TENTANG -->
+
+        <section id="tentang">
+
+            <h2>Tentang KopiKita</h2>
+
+            <p>
+                KopiKita adalah bisnis minuman kopi sederhana yang menyediakan
+                berbagai pilihan kopi berkualitas dengan harga terjangkau.
+            </p>
+
+            <p>
+                Kami menyediakan kopi untuk menemani aktivitas sehari-hari,
+                baik untuk bekerja, belajar, maupun bersantai.
+            </p>
+
+            <!-- GAMBAR -->
+
+            <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+                alt="Secangkir kopi"
+            >
+
+            <!-- LINK -->
+
+            <p>
+                Ikuti informasi dan promo terbaru kami melalui
+                <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                >
+                    Instagram KopiKita
+                </a>.
+            </p>
+
+        </section>
+
+
+        <!-- SECTION KEUNGGULAN -->
+
+        <section id="keunggulan">
+
+            <h2>Keunggulan KopiKita</h2>
+
+            <p>
+                Beberapa keunggulan yang kami tawarkan:
+            </p>
+
+            <!-- LIST -->
+
+            <ul>
+                <li>Biji kopi berkualitas</li>
+                <li>Harga terjangkau</li>
+                <li>Pemesanan mudah</li>
+                <li>Pelayanan cepat</li>
+                <li>Bisa dipesan secara online</li>
+            </ul>
+
+        </section>
+
+
+        <!-- SECTION MENU -->
+
+        <section id="menu">
+
+            <h2>Daftar Menu Kopi</h2>
+
+            <p>
+                Berikut adalah beberapa menu yang tersedia di KopiKita.
+            </p>
+
+            <!-- TABEL -->
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Menu</th>
+                        <th>Ukuran</th>
+                        <th>Harga</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Americano</td>
+                        <td>Medium</td>
+                        <td>Rp15.000</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Cappuccino</td>
+                        <td>Medium</td>
+                        <td>Rp20.000</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Caffe Latte</td>
+                        <td>Large</td>
+                        <td>Rp22.000</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Caramel Macchiato</td>
+                        <td>Large</td>
+                        <td>Rp25.000</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- SECTION FORMULIR -->
+
+        <section id="pesan">
+
+            <h2>Formulir Pemesanan</h2>
+
+            <p>
+                Silakan isi formulir berikut untuk melakukan pemesanan.
+            </p>
+
+
+            <form action="#" method="post">
+
+                <!-- NAMA -->
+
+                <label for="nama">
+                    Nama Lengkap
+                </label>
+
+                <input
+                    type="text"
+                    id="nama"
+                    name="nama"
+                    placeholder="Masukkan nama lengkap"
+                    required
+                >
+
+
+                <!-- EMAIL -->
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="contoh@email.com"
+                    required
+                >
+
+
+                <!-- NOMOR TELEPON -->
+
+                <label for="telepon">
+                    Nomor Telepon
+                </label>
+
+                <input
+                    type="tel"
+                    id="telepon"
+                    name="telepon"
+                    placeholder="08xxxxxxxxxx"
+                    required
+                >
+
+
+                <!-- PILIH MENU -->
+
+                <label for="menu-pesanan">
+                    Pilih Menu
+                </label>
+
+                <select
+                    id="menu-pesanan"
+                    name="menu-pesanan"
+                    required
+                >
+
+                    <option value="">
+                        -- Pilih Menu --
+                    </option>
+
+                    <option value="americano">
+                        Americano - Rp15.000
+                    </option>
+
+                    <option value="cappuccino">
+                        Cappuccino - Rp20.000
+                    </option>
+
+                    <option value="latte">
+                        Caffe Latte - Rp22.000
+                    </option>
+
+                    <option value="macchiato">
+                        Caramel Macchiato - Rp25.000
+                    </option>
+
+                </select>
+
+
+                <!-- JUMLAH -->
+
+                <label for="jumlah">
+                    Jumlah Pesanan
+                </label>
+
+                <input
+                    type="number"
+                    id="jumlah"
+                    name="jumlah"
+                    min="1"
+                    placeholder="Masukkan jumlah pesanan"
+                    required
+                >
+
+
+                <!-- CATATAN -->
+
+                <label for="catatan">
+                    Catatan Pesanan
+                </label>
+
+                <textarea
+                    id="catatan"
+                    name="catatan"
+                    rows="5"
+                    placeholder="Contoh: Kurangi gula, tanpa es, dll."
+                ></textarea>
+
+
+                <!-- BUTTON -->
+
+                <button type="submit">
+                    Kirim Pesanan
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 KopiKita.
+            Semua Hak Dilindungi.
+        </p>
+
+    </footer>
+
+</body>
+</html>
