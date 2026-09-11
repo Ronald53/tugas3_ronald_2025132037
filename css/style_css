@@ -1,0 +1,308 @@
+/* =========================
+   STYLE.CSS - KOPIKITA
+   ========================= */
+
+/* ===== BODY ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f1eb;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* ===== HEADER ===== */
+header {
+    background-color: #5c3d2e;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+
+/* ===== NAVIGATION ===== */
+/* Flexbox */
+nav {
+    background-color: #3e2723;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===== MAIN ===== */
+/* Box Model */
+main {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+
+/* ===== SECTION ===== */
+/* Selector tag */
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ===== SELECTOR ID ===== */
+#tentang {
+    border-top: 5px solid #8b5e3c;
+}
+
+
+/* ===== JUDUL ===== */
+h2 {
+    color: #5c3d2e;
+    margin-top: 0;
+}
+
+
+/* ===== DESCENDANT SELECTOR ===== */
+/* Mengatur li yang berada di dalam ul */
+section ul li {
+    margin-bottom: 8px;
+}
+
+
+/* ===== IMAGE ===== */
+img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   TABLE
+   ========================= */
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    min-width: 650px;
+}
+
+th,
+td {
+    border: 1px solid #999;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #d7b899;
+    color: #3e2723;
+}
+
+/* Warna baris tabel */
+tbody tr:nth-child(even) {
+    background-color: #faf7f3;
+}
+
+/* Efek ketika mouse diarahkan ke baris */
+tbody tr:hover {
+    background-color: #eee2d5;
+}
+
+
+/* =========================
+   FORM
+   ========================= */
+
+/* Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* Label */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+
+/* Input, Select, Textarea */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font: inherit;
+    background-color: white;
+}
+
+
+/* Efek ketika input dipilih */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #c8a27a;
+    border-color: #5c3d2e;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ===== BUTTON ===== */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #5c3d2e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #3e2723;
+}
+
+
+/* =========================
+   HASIL PERHITUNGAN
+   ========================= */
+
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    border-left: 5px solid #5c3d2e;
+    background-color: #f7f1eb;
+    border-radius: 6px;
+}
+
+.result-box h3 {
+    margin-top: 0;
+    color: #5c3d2e;
+}
+
+.result-total {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background-color: #3e2723;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* =========================
+   RESPONSIVE / MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    /* Ukuran judul lebih kecil */
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+
+    /* Navigation di HP */
+    nav {
+        align-items: stretch;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* Main di HP */
+    main {
+        padding: 0 12px;
+        margin-top: 15px;
+    }
+
+
+    /* Section di HP */
+    section {
+        padding: 18px;
+    }
+
+
+    /* Form menjadi satu kolom */
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+
+    /* Button memenuhi layar */
+    button {
+        width: 100%;
+    }
+}
