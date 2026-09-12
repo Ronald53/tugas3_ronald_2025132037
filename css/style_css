@@ -1,308 +1,540 @@
-/* =========================
-   STYLE.CSS - KOPIKITA
-   ========================= */
+/* =========================================
+   RESET
+========================================= */
 
-/* ===== BODY ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f5f1eb;
-    color: #333;
-    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f3ef;
+    color: #2f211b;
 }
 
 
-/* ===== HEADER ===== */
+/* =========================================
+   HEADER
+========================================= */
+
 header {
-    background-color: #5c3d2e;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-}
+    width: 100%;
+    padding: 18px 7%;
 
-header h1 {
-    margin: 0;
-    font-size: 36px;
-}
-
-header p {
-    margin-bottom: 0;
-    font-size: 18px;
-}
-
-
-/* ===== NAVIGATION ===== */
-/* Flexbox */
-nav {
-    background-color: #3e2723;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 15px 20px;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #3b2418;
+    color: white;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 6px 12px;
     font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #e6b17e;
 }
 
+.cart-button {
+    border: none;
+    background-color: #c8895b;
+    color: white;
 
-/* ===== MAIN ===== */
-/* Box Model */
-main {
-    max-width: 1000px;
-    margin: 25px auto;
-    padding: 0 20px;
+    padding: 10px 16px;
+    border-radius: 8px;
+
+    cursor: pointer;
+    font-weight: bold;
 }
 
+.cart-button:hover {
+    background-color: #ad7046;
+}
 
-/* ===== SECTION ===== */
-/* Selector tag */
-section {
+#cartCount {
     background-color: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    color: #3b2418;
+
+    padding: 2px 7px;
+    border-radius: 20px;
+
+    margin-left: 5px;
 }
 
 
-/* ===== SELECTOR ID ===== */
-#tentang {
-    border-top: 5px solid #8b5e3c;
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(40, 22, 13, 0.72),
+            rgba(40, 22, 13, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085")
+        center / cover;
+}
+
+.hero-content {
+    color: white;
+    max-width: 700px;
+    padding: 30px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 19px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-button {
+    display: inline-block;
+
+    background-color: #c8895b;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 25px;
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.hero-button:hover {
+    background-color: #ad7046;
 }
 
 
-/* ===== JUDUL ===== */
-h2 {
-    color: #5c3d2e;
-    margin-top: 0;
+/* =========================================
+   SECTION
+========================================= */
+
+.section {
+    padding: 70px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #75675f;
 }
 
 
-/* ===== DESCENDANT SELECTOR ===== */
-/* Mengatur li yang berada di dalam ul */
-section ul li {
+/* =========================================
+   MENU
+========================================= */
+
+.menu-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 25px;
+}
+
+.menu-card {
+    background-color: white;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-image {
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+}
+
+.menu-content {
+    padding: 20px;
+}
+
+.menu-content h3 {
     margin-bottom: 8px;
 }
 
+.menu-description {
+    color: #75675f;
+    font-size: 14px;
 
-/* ===== IMAGE ===== */
-img {
+    min-height: 40px;
+
+    margin-bottom: 15px;
+}
+
+.menu-price {
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.add-button {
     width: 100%;
-    max-width: 500px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
-}
 
+    padding: 11px;
 
-/* =========================
-   TABLE
-   ========================= */
+    border: none;
+    border-radius: 7px;
 
-.table-wrapper {
-    overflow-x: auto;
-}
+    background-color: #3b2418;
+    color: white;
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    min-width: 650px;
-}
+    cursor: pointer;
 
-th,
-td {
-    border: 1px solid #999;
-    padding: 12px;
-    text-align: center;
-}
-
-th {
-    background-color: #d7b899;
-    color: #3e2723;
-}
-
-/* Warna baris tabel */
-tbody tr:nth-child(even) {
-    background-color: #faf7f3;
-}
-
-/* Efek ketika mouse diarahkan ke baris */
-tbody tr:hover {
-    background-color: #eee2d5;
-}
-
-
-/* =========================
-   FORM
-   ========================= */
-
-/* Grid */
-.form-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-}
-
-.form-group {
-    min-width: 0;
-}
-
-.full-width {
-    grid-column: 1 / -1;
-}
-
-
-/* Label */
-label {
-    display: block;
-    margin-bottom: 6px;
     font-weight: bold;
 }
 
+.add-button:hover {
+    background-color: #5a3928;
+}
 
-/* Input, Select, Textarea */
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    box-sizing: border-box;
-    border: 1px solid #aaa;
-    border-radius: 6px;
-    font: inherit;
+
+/* =========================================
+   CART
+========================================= */
+
+.cart-section {
+    background-color: #eee5dd;
+}
+
+.cart-box {
+    max-width: 900px;
+    margin: auto;
+
     background-color: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
 }
 
+.cart-item {
+    display: flex;
 
-/* Efek ketika input dipilih */
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 2px solid #c8a27a;
-    border-color: #5c3d2e;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eee;
 }
 
-
-textarea {
-    resize: vertical;
+.cart-item-info {
+    flex: 1;
 }
 
+.cart-item-info h3 {
+    margin-bottom: 5px;
+}
 
-/* ===== BUTTON ===== */
-button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #5c3d2e;
-    color: white;
+.cart-item-price {
+    color: #75675f;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-control button {
+    width: 30px;
+    height: 30px;
+
     border: none;
-    border-radius: 6px;
+
+    background-color: #3b2418;
+    color: white;
+
+    border-radius: 5px;
+
     cursor: pointer;
+}
+
+.remove-button {
+    border: none;
+
+    background-color: #d9534f;
+    color: white;
+
+    padding: 8px 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+
+/* =========================================
+   CART SUMMARY
+========================================= */
+
+.cart-summary {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 2px solid #eee;
+}
+
+.summary-row,
+.summary-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.summary-total {
+    font-size: 22px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #ddd;
+}
+
+.checkout-button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #c8895b;
+    color: white;
+
     font-size: 16px;
     font-weight: bold;
+
+    cursor: pointer;
 }
 
-button:hover {
-    background-color: #3e2723;
+.checkout-button:hover {
+    background-color: #ad7046;
 }
 
 
-/* =========================
-   HASIL PERHITUNGAN
-   ========================= */
+/* =========================================
+   TRANSACTION HISTORY
+========================================= */
 
-.result-box {
-    margin-top: 25px;
-    padding: 20px;
-    border-left: 5px solid #5c3d2e;
-    background-color: #f7f1eb;
-    border-radius: 6px;
+.transaction-section {
+    background-color: #f7f3ef;
 }
 
-.result-box h3 {
-    margin-top: 0;
-    color: #5c3d2e;
+#transactionHistory {
+    max-width: 1000px;
+    margin: auto;
 }
 
-.result-total {
-    font-size: 22px;
+.transaction-card {
+    background-color: white;
+
+    margin-bottom: 20px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.transaction-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.transaction-id {
+    font-weight: bold;
+    color: #3b2418;
+}
+
+.transaction-date {
+    color: #777;
+    font-size: 14px;
+}
+
+.transaction-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 8px 0;
+}
+
+.transaction-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 15px;
+
+    padding-top: 15px;
+
+    border-top: 2px solid #eee;
+
+    font-size: 18px;
     font-weight: bold;
 }
 
+.empty-history {
+    max-width: 700px;
+    margin: auto;
 
-/* =========================
-   FOOTER
-   ========================= */
+    background-color: white;
 
-footer {
-    background-color: #3e2723;
-    color: white;
+    padding: 40px;
+
     text-align: center;
-    padding: 20px;
+
+    border-radius: 12px;
+
+    color: #777;
 }
 
 
-/* =========================
-   RESPONSIVE / MOBILE
-   ========================= */
+/* =========================================
+   FOOTER
+========================================= */
 
-@media (max-width: 700px) {
+footer {
+    background-color: #3b2418;
 
-    /* Ukuran judul lebih kecil */
-    header h1 {
-        font-size: 28px;
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+.footer-content h2 {
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    color: #ddd;
+
+    margin-bottom: 10px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
     }
 
-    header p {
-        font-size: 15px;
-    }
-
-
-    /* Navigation di HP */
     nav {
-        align-items: stretch;
+        gap: 15px;
     }
 
-    nav a {
-        width: 100%;
-        text-align: center;
+    .hero-content h1 {
+        font-size: 34px;
     }
 
-
-    /* Main di HP */
-    main {
-        padding: 0 12px;
-        margin-top: 15px;
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-
-    /* Section di HP */
-    section {
-        padding: 18px;
+    .transaction-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
 
-
-    /* Form menjadi satu kolom */
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .full-width {
-        grid-column: auto;
-    }
-
-
-    /* Button memenuhi layar */
-    button {
-        width: 100%;
-    }
 }
